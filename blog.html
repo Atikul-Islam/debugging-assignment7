@@ -12,7 +12,32 @@
         <h1 id="blog-title">Welcome To Our Blog</h1>
     </header>
     
+    <main>
+        <div id="blog-body">
+            <div>
+                <h1>What is the difference between Local storage and Session storage?</h1>
+                <p><span class="p-style"> Local Storage:</span> This read-only interface property provides access to the Document’s local storage object, the stored data is stored across browser sessions. Similar to sessionStorage, except that localStorage data gets cleared when the page session ends – that is when the page is closed. It is cleared when the last “private” tab of a browser is closed (localStorage data for a document loaded in a private browsing or incognito session).<br><br>
 
+                DOMStrings are storage formats that use UTF-16 to encode data, which uses two bytes per character. Strings are automatically generated from integer keys just as they are for objects. The data stored in LocalStorage is specific to a protocol in the document. If the site is loaded over HTTP (e.g., http://example.com), localStorage returns a different object than if it is loaded over HTTPS (e.g., https://abc.com).<br><br>
+                    
+                If a document is loaded from a file: URL (that is, directly from the user’s local file system instead of being loaded from the server) the requirements for behavior are undefined and may vary among different browsers. Each file appears to be returned a different object by localStorage in all current browsers: URL. Essentially, it seems to be a case of each URL: file having its own unique local storage area.<br><br>
+                    
+                 This behavior cannot be guaranteed because as mentioned above, the file: URL requirements remain unclear. As such, there’s a possibility that browsers may change how they handle files at any time. The way some browsers handle it has evolved.<br><br>
+                    
+                <span class="p-style"> Local Storage has 4 methods:</span><br><br>
+                    
+                 <span class="p-style">setItem() Method –</span> This method takes two parameters one is key and another one is value. It is used to store the value in a particular location with the name of the key.<br>
+                localStorage.setItem(key, value)<br><br>
+                <span class="p-style">getItem() Method –</span> This method takes one parameter that is key which is used to get the value stored with a particular key name.<br>
+                localStorage.getItem(key)<br><br>
+                <span class="p-style">removeItem() Method –</span>This is method is used to remove the value stored in the memory in reference to key.<br>
+                localStorage.removeItem(key)<br><br>
+                <span class="p-style">clear() Method –</span> This method is used to clear all the values stored in localstorage.<br>    
+                localStorage.clear()</p>
+            </div>
+
+        </div>
+    </main>
     
 </body>
 </html>

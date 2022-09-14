@@ -35,7 +35,7 @@
                 <span class="p-style">clear() Method –</span> This method is used to clear all the values stored in localstorage.<br>    
                 localStorage.clear()</p>
             </div>
-            <div>
+            <div class="question">
                 <h1>What is the difference between Global Scope and Local Scope?</h1><br>
                 <p><span class="p-style">Global Scope:</span><br><br>
                     The variables defined outside of any function or curly brackets are known as global variables and have global scope. Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.
@@ -75,7 +75,7 @@
                     console.log(name);//reference error <br>
                 </p>
             </div>
-            <div>
+            <div class="question">
                 <h1>What is Event Loop in JavaScript?</h1>
                 <p>Let's look into JavaScript Event loop from a different angle. Sounds interesting, right? It is! So, sit tight and let's dive into it!
                     The concept of event loop is very simple. But in order to understand that, first we need to be clear about some concepts related to event loop. <br><br>
@@ -115,6 +115,78 @@
                     
                     <span class="p-style">Event Loop</span><br>
                     Event loop is just a guardian who keeps a good communication with Call Stack and Callback Queue. It checks if the call stack is free, then lets know the callback queue. Then Callback queue passes the callback function to Call stack to be executed. When all the callback functions are executed, the call stack is out and global execution context is free. <br></p>
+            </div>
+            <div class="question">
+                <h1>How many ways can we get undefined?</h1>
+                <p><span class="p-style">1.Uninitialized variable : </span><br>
+                    A declared variable but not yet assigned with a value (uninitialized) is by default undefined. <br><br>
+                    Let's demonstrate that in an example: <br>
+                    let myVariable; <br>
+                    myVariable; // => undefined <br><br>
+                    myVariable is declared and not yet assigned with a value. Accessing the variable evaluates to undefined. <br><br>
+
+                <span class="p-style">2.Accessing a non-existing property : </span><br>
+                    When accessing a non-existing object property, JavaScript returns undefined. <br><br>
+                    Let's demonstrate that in an example: <br>
+                    let favoriteMovie = { <br>
+                        title: 'Blade Runner' <br>
+                      }; <br>
+                      favoriteMovie.actors; // => undefined <br><br>
+                    
+                    favoriteMovie is an object with a single property title. Accessing a non-existing property actors using a property accessor favoriteMovie.actors evaluates to undefined. <br><br>
+                
+                <span class="p-style">3. Function parameters :</span> <br>
+                The function parameters implicitly default to undefined. <br><br>
+
+                Usually a function defined with a specific number of parameters should be invoked with the same number of arguments. That's when the parameters get the values you expect: <br>
+
+                function multiply(a, b) { <br>
+                a; // => 5 <br>
+                b; // => 3 <br>
+                return a * b; <br>
+                } <br>
+                multiply(5, 3); // => 15 <br><br>
+                When multiply(5, 3), the parameters a and b receive 5 and respectively 3 values. The multiplication is calculated as expected: 5 * 3 = 15. <br><br>
+
+                What does happen when you omit an argument on invocation? The corresponding parameter inside the function becomes undefined. <br><br>
+
+                <span class="p-style">4.Function return value :</span> <br>
+                Implicitly, without return statement, a JavaScript function returns undefined. <br><br>
+                A function that doesn't have return statement implicitly returns undefined: <br>
+
+                function square(x) { <br>
+                  const res = x * x; <br>
+                } <br>
+                square(2); // => undefined <br><br>
+                square() function does not return any computation results. The function invocation result is undefined. <br><br>
+
+                <span class="p-style">5. void operator :</span> <br>
+                void <expression> evaluates the expression and returns undefined no matter the result of the evaluation. <br><br>
+
+                    void 1;                    // => undefined <br>
+                    void (false);              // => undefined <br>
+                    void {name: 'John Smith'}; // => undefined <br>
+                    void Math.min(1, 3);       // => undefined <br><br>
+                    One use case of void operator is to suppress expression evaluation to undefined, relying on some side-effect of the evaluation. <br><br>
+
+                <span class="p-style">6. Accessing array elements outside of the index range:</span> <br><br>
+
+                    const a = [2,5]; <br>
+                    console.log(a[0]); //output 2 <br>
+                    console.log(a[5]); //output undefined <br>
+                    console.log(a[10]); //output undefined <br><br>
+
+                <span class="p-style">7. Deleting an element inside an array :</span><br><br>
+
+                    const a = [2,5]; <br>
+                    delete a[1]; <br>
+                    console.log(a[1]); //output undefined <br><br>
+
+                <span class="p-style">8. Set a value directly to undefined:</span> <br><br>
+                 const element = undefined;
+                  
+
+                </p>
             </div>
 
         </div>

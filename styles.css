@@ -190,12 +190,14 @@ button {
 
 #blog-body{
   color: white;
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
-
+.question{
+  margin: 20px;
+}
 .p-style{
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
 }
 

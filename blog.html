@@ -14,8 +14,8 @@
     
     <main>
         <div id="blog-body">
-            <div>
-                <h1>What is the difference between Local storage and Session storage?</h1>
+            <div class="question">
+                <h1>What is the difference between Local storage and Session storage?</h1><br>
                 <p><span class="p-style"> Local Storage:</span> This read-only interface property provides access to the Document’s local storage object, the stored data is stored across browser sessions. Similar to sessionStorage, except that localStorage data gets cleared when the page session ends – that is when the page is closed. It is cleared when the last “private” tab of a browser is closed (localStorage data for a document loaded in a private browsing or incognito session).<br><br>
 
                 DOMStrings are storage formats that use UTF-16 to encode data, which uses two bytes per character. Strings are automatically generated from integer keys just as they are for objects. The data stored in LocalStorage is specific to a protocol in the document. If the site is loaded over HTTP (e.g., http://example.com), localStorage returns a different object than if it is loaded over HTTPS (e.g., https://abc.com).<br><br>
@@ -34,6 +34,46 @@
                 localStorage.removeItem(key)<br><br>
                 <span class="p-style">clear() Method –</span> This method is used to clear all the values stored in localstorage.<br>    
                 localStorage.clear()</p>
+            </div>
+            <div>
+                <h1>What is the difference between Global Scope and Local Scope?</h1><br>
+                <p><span class="p-style">Global Scope:</span><br><br>
+                    The variables defined outside of any function or curly brackets are known as global variables and have global scope. Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.
+                    
+                    For example:<br><br>
+                    var name = "Md Atikul Islam";<br>
+
+                    function printName(){<br>
+                    // the variable can be accessed inside here<br>
+                    console.log("This Blog is by "+name);<br>
+                    }<br><br>
+                    
+                    printName();<br><br>
+                
+                    <span class="p-style">Block Scope:</span><br><br>
+
+                    So far, we’ve seen variables defined with the var keyword. Var can declare a variable either in the global or local scope. The variables that are declared within the block scope are comparable to local ones. They are available within the block that they are defined.<br><br>
+
+                    The main difference between the local scope and block scope is that the block statements (e.g. if conditions or for loops), don't create a new scope. So the var keyword will not have an effect, because the variables are still in the same scope.<br><br>
+                    
+                    //the block statement 'if' doesn't create a new scope
+                    if(true){
+                        var name = 'Atik'; //name is still in the global scope.
+                    }<br>
+                    console.log(name);
+
+                    ES6 introduced block scope by using the let and const keywords. These two keywords are scoped within the block which are defined. <br><br>
+
+                    //the block statement 'if' doesn't create a new scope <br>
+                    if(true){ <br>
+                        var name = 'Atik'; //name is still in the global scope. <br>
+                        const surName = 'Mina'; <br>
+                        let location = 'Dhaka'; <br>
+                    }<br><br>
+                    console.log(name);//'Atik'<br>
+                    console.log(name);//Reference error <br>
+                    console.log(name);//reference error <br>
+                </p>
             </div>
 
         </div>

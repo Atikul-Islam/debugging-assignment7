@@ -211,6 +211,20 @@ button {
   }
 }
 
+@media only screen and (min-width: 1200px) {
+  .box-container {
+    padding: 0 20px;
+    width: 80%;
+  }
+  .card {
+    width: 30%;
+    height: 220px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 
 
 
